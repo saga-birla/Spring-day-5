@@ -1,0 +1,153 @@
+package controller;
+import model.User;
+import org.springframework.http.HttpHeaders;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+import propertyEditor.DobPropertyEditor;
+import validation.UserValidator;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+@org.springframework.stereotype.Controller
+public class GreetController {
+//    @RequestMapping("greet")
+//     Question1.............
+//    public String greet()
+//    {
+//        //System.out.println("inside greet......");
+//        return "welcome";
+//    }
+
+    //Question2
+//    public String greet(@RequestParam("username") String username, HttpServletRequest req)
+//    {
+//        req.setAttribute("username", username);
+//        System.out.println("I am here............."+username);
+//        return "welcome";
+//    }
+    //Question3
+//    public ModelAndView greet(@RequestParam("username") String username)
+//    {
+//        ModelAndView modelAndView=new ModelAndView();
+//        modelAndView.setViewName("welcome");
+//        modelAndView.addObject("username",username);
+//        return modelAndView;
+//    }
+    //Question4...
+//    @RequestMapping("/submitAssignment")
+//    public String submitAssignment()
+//    {
+//       // return "redirect:welcome.jsp";
+//        return "forward:welcome.jsp";
+//    }
+    //Question5..............
+//    @RequestMapping("greet")
+//    public String header(@RequestHeader(value = HttpHeaders.REFERER)String referer){
+//        if(referer!=null)
+//            return "forward:hello.jsp";
+//        return "errors";
+//    }
+
+
+//    @RequestMapping("userForm")
+//    public String userForm()
+//    {
+//        return "userForm.jsp";
+//    }
+//
+//    @InitBinder
+//    public void initBinder(WebDataBinder webDataBinder)
+//    {
+//        webDataBinder.registerCustomEditor(LocalDate.class,"dob",new DobPropertyEditor());
+//    }
+
+
+//    @RequestMapping("")
+//    public void insertCustomer(@RequestParam("userId") Integer id ,@RequestParam("userName")
+//            String username,@RequestParam("userMonthlyIncome") double income, @RequestParam("profession") String profession ,
+//    @RequestParam("companyName") String companyName,@RequestParam("dob") LocalDate dob){
+//        System.out.println("username: "+username);
+//
+//
+//
+//    }
+    //QUESTION..9................
+//    @RequestMapping("register")
+//    public String form(Model model){
+//        model.addAttribute("user",new User());
+//        return "userForm";
+//    }
+/*
+    @RequestMapping("process")
+    public String formProcess(@ModelAttribute("user")User newuser){
+        return "success";
+    }*/
+
+//    @RequestMapping("process")
+//    public String processUser(@Valid @ModelAttribute("user")User newuser, Errors errors, ModelMap modelMap){
+//
+//         new UserValidator().validate(newuser,errors);
+//        if(errors.hasErrors())
+//            return "userForm";
+//        return "success";
+//        String path="/invalid";
+//        if(newuser.getUserId()<0)
+//            return "forward:invalidUser/"+path;
+//        return "success";
+//    }
+    //@RequestMapping("process")
+//    public String processUser(@Valid @ModelAttribute("user")User newuser,Errors errors,ModelMap modelmap)
+//    {
+//        if(errors.hasErrors())
+//            return "userForm";
+//        return "success";
+//    }
+
+    //QUESTION...9..................
+//    @ModelAttribute("hobbieslist")
+//    public List<String> hobbiesChoose()
+//    {
+//        List<String> hobbies=new ArrayList<>();
+//        hobbies.add("singing");
+//        hobbies.add("reading");
+//        hobbies.add("yoga");
+//        return hobbies;
+//    }
+//    @ModelAttribute("location")
+//    public List<String> preferLocation()
+//    {
+//        List<String> locations=new ArrayList<>();
+//        locations.add("goa");
+//        locations.add("delhi");
+//        return locations;
+//    }
+//    @RequestMapping("process")
+//        public String ageCalculator(@Valid  @ModelAttribute("user")User newuser, BindingResult errors) {
+//            new UserValidator().validate(newuser, errors);
+//            if(errors.hasErrors()){
+//                return "userForm";
+//            }
+//            Random random = new Random();
+//            newuser.setUserId(random.nextInt(1000));
+//            Period period = Period.between(newuser.getDob(), LocalDate.now());
+//            if(period.getYears()<21){
+//            return "redirect:/error.jsp";
+//            } else {
+//                newuser.setAge(period.getYears());
+//                //return"success";
+//            }
+//        return"success";
+//        }
+    //........................
+}
