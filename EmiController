@@ -1,0 +1,33 @@
+package controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+import validation.Emi;
+
+@Controller
+public class EmiController {
+
+    @RequestMapping("emi")
+    public String emiPage(@ModelAttribute("EMI") Emi emi){
+        System.out.println("runniggggggggggggg!!!!!!!!!!!!!!!!");
+        return "emiForm";
+    }
+
+
+
+    @RequestMapping("emicalculate")
+    public ModelAndView showEMI(@ModelAttribute("EMI") Emi emi) {
+        System.out.println(emi.calculateEmi());
+
+        ModelAndView modelAndView = new ModelAndView();
+
+        modelAndView.addObject("calculateEmi", emi.calculateEmi());
+
+        modelAndView.setViewName("displayEmi");
+
+        return modelAndView;
+
+    }
+}
