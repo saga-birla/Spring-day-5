@@ -14,3 +14,18 @@
 //        modelAndView.addObject("username",username);
 //        return modelAndView;
 //    }
+
+//Question4...
+//    @RequestMapping("/submitAssignment")
+//    public String submitAssignment()
+//    {
+//       // return "redirect:welcome.jsp";
+//        return "forward:welcome.jsp";
+//    }
+    //Question5..............
+//    @RequestMapping("greet")
+//    public String header(@RequestHeader(value = HttpHeaders.REFERER)String referer){
+//        if(referer!=null)
+//            return "forward:hello.jsp";
+//        return "errors";
+//    }
