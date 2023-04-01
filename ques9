@@ -1,0 +1,105 @@
+//    @RequestMapping("userForm")
+//    public String userForm()
+//    {
+//        return "userForm.jsp"
+//    }
+//
+//    @InitBinder
+//    public void initBinder(WebDataBinder webDataBinder)
+//    {
+//        webDataBinder.registerCustomEditor(LocalDate.class,"dob",new DobPropertyEditor());
+//    }
+
+
+//QUESTION..9................
+//    @RequestMapping("register")
+//    public String form(Model model){
+//        model.addAttribute("user",new User());
+//        return "userForm";
+//    }
+/*
+    @RequestMapping("process")
+    public String formProcess(@ModelAttribute("user")User newuser){
+        return "success";
+    }*/
+
+//    @RequestMapping("process")
+//    public String processUser(@Valid @ModelAttribute("user")User newuser, Errors errors, ModelMap modelMap){
+//
+//         new UserValidator().validate(newuser,errors);
+//        if(errors.hasErrors())
+//            return "userForm";
+//        return "success";
+//        String path="/invalid";
+//        if(newuser.getUserId()<0)
+//            return "forward:invalidUser/"+path;
+//        return "success";
+//    }
+    //@RequestMapping("process")
+//    public String processUser(@Valid @ModelAttribute("user")User newuser,Errors errors,ModelMap modelmap)
+//    {
+//        if(errors.hasErrors())
+//            return "userForm";
+//        return "success";
+//    }
+
+    //QUESTION...9..................
+//    @ModelAttribute("hobbieslist")
+//    public List<String> hobbiesChoose()
+//    {
+//        List<String> hobbies=new ArrayList<>();
+//        hobbies.add("singing");
+//        hobbies.add("reading");
+//        hobbies.add("yoga");
+//        return hobbies;
+//    }
+//    @ModelAttribute("location")
+//    public List<String> preferLocation()
+//    {
+//        List<String> locations=new ArrayList<>();
+//        locations.add("goa");
+//        locations.add("delhi");
+//        return locations;
+//    }
+//    @RequestMapping("process")
+//        public String ageCalculator(@Valid  @ModelAttribute("user")User newuser, BindingResult errors) {
+//            new UserValidator().validate(newuser, errors);
+//            if(errors.hasErrors()){
+//                return "userForm";
+//            }
+//            Random random = new Random();
+//            newuser.setUserId(random.nextInt(1000));
+//            Period period = Period.between(newuser.getDob(), LocalDate.now());
+//            if(period.getYears()<21){
+//            return "redirect:/error.jsp";
+//            } else {
+//                newuser.setAge(period.getYears());
+//                //return"success";
+//            }
+//        return"success";
+//        }
+
+
+
+//service page
+<!DOCTYPE html>
+<%@page isELIgnored="false"%>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Welcome to Success page...</h1>
+<br>
+${customer.customerId}<br>
+${customer.customerName}<br>
+${user.userPassword}<br>
+${user.dob}<br>
+${customer.monthlyIncome}<br>
+${customer.profession}<br>
+${customer.designation}<br>
+${customer.companyName}
+<br>
+</body>
+</html>
