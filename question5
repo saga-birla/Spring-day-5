@@ -1,0 +1,6 @@
+//    public String greet(@RequestParam("username") String username, HttpServletRequest req)
+//    {
+//        req.setAttribute("username", username);
+//        System.out.println("I am here............."+username);
+//        return "welcome";
+//    }
