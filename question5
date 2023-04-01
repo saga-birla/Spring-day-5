@@ -4,3 +4,13 @@
 //        System.out.println("I am here............."+username);
 //        return "welcome";
 //    }
+
+
+//q3
+//    public ModelAndView greet(@RequestParam("username") String username)
+//    {
+//        ModelAndView modelAndView=new ModelAndView();
+//        modelAndView.setViewName("welcome");
+//        modelAndView.addObject("username",username);
+//        return modelAndView;
+//    }
